@@ -1,0 +1,67 @@
+Guide that explains usage of RazzAPI
+Api made by me @Filip343Filip
+
+1.  Prepare the Project and Files:
+    *   Switch to x64 Build: In Visual Studio, go to "Build" -> "Configuration Manager". Under "Active solution platform", select "x64" from the dropdown. If it's not available, click "New..." and choose "x64".
+    *   Extract Files: From the RazzAPI folder, extract the `RazzAPI.dll` file and put it in the the `bin` folder of your project.
+    *   Place Files: Move both the `RazzAPI.dll` file and the entire `bin` folder into the *output directory* of your project. This is typically located in `[Your Project Folder]\bin\x64\Debug` or `[Your Project Folder]\bin\x64\Release`, depending on your build configuration.
+
+1.5 Make sure you have libcrypto-3-x64.dll and libssl-3-x64.dll in Debug/bin
+
+2.  Add Reference:
+    *   In your Visual Studio project, right-click on "References" in the Solution Explorer.
+    *   Select "Add Reference".
+    *   Browse to the location of the RazzAPI.dll file.
+    *   Select the library and click "Add".
+
+3.  Include Namespace:
+    *   In your C# code files, add the following line at the top:
+        using RazzAPI;
+
+4. Initialize RazzAPI like this:
+
+        public Form1()
+        {
+            InitializeComponent();
+            Comunication.Start
+        }
+
+or. if you only want to run the updater: 
+
+        public Form1()
+        {
+            InitializeComponent();
+            Updater.AutoUpdateXenoDll();
+        }
+
+5.  API Functions:
+
+    *   AutoUpdate:
+        Updater.AutoUpdateXenoDll();
+        Will Update dlls in bin folder(if needed)
+
+    *   Attach:
+        Modules.Inject();
+
+    *   Execute Script:
+        Modules.ExecuteScript(script);
+
+        Executes a provided script in Roblox.  Replace `script` with the script string.(richTextbox.Text for example)
+
+    *   Kill Roblox:
+        Utilities.KillRoblox();
+
+        Kills the Roblox process.
+
+
+    *   Injection and execution notifier:
+	UseExecutionNotifier()
+	public static void UseRazzNotifier(string MainText, string Subtext)
+
+        modifiable.
+
+
+
+
+
+
