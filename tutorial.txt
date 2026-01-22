@@ -23,7 +23,7 @@ Api made by me @Filip343Filip
         public Form1()
         {
             InitializeComponent();
-            Comunication.Start
+            Communication.Start
         }
 
 or. if you only want to run the updater: 
@@ -59,6 +59,7 @@ or. if you only want to run the updater:
 	public static void UseRazzNotifier(string MainText, string Subtext)
 
         modifiable.
+
 
 
 
